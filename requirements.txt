@@ -1,0 +1,6 @@
+flask
+requests
+ibm_db
+clarifai-grpc
+# flask_mysqldb
+# ibm-watson>=5.1.0

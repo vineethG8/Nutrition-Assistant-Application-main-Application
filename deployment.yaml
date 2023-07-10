@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: nutrition
+ spec:
+   replicas: 5
+   selector:
+     matchLabels:
+       app: mynutri
+   template:
+     metadata:
+       labels:
+         app: mynutri
+     spec:
+       containers:
+       - name: mynutri
+         image: jp.icr.io/nutritionapp/mynutri
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000
